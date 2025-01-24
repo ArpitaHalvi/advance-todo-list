@@ -38,7 +38,7 @@ export default function Navbar() {
             </NavLink>
           )}
           <NavLink to="/todo-list" className="todo-link">
-            Todo List
+            Todos
           </NavLink>
         </div>
       </div>
