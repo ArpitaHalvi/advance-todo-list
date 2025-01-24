@@ -9,10 +9,21 @@ import {
 export default function TaskList() {
   const todos = useSelector((state) => state.todos.todos);
   const dispatch = useDispatch();
+  const sortByPriority = (todos) => {
+    const priorityOrder = {
+      high: 1,
+      medium: 2,
+      low: 3,
+    };
+    return todos.sort(
+      (a, b) => priorityOrder[a.priority] - priorityOrder[b.priority]
+    );
+  };
+  const sortedTodos = sortByPriority(todos);
   return (
     <section className="task-list-section">
       <ul className="todo-container">
-        {todos.map((todo) => {
+        {sortedTodos.map((todo) => {
           return (
             <li
               className={`todo-item ${todo.isCompleted ? "completed" : ""}`}

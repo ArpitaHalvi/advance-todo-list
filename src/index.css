@@ -22,4 +22,6 @@ body {
   /* background: linear-gradient(#3e88ff, #78d4ff, #a0dcff); */
   background: linear-gradient(black, #121010, #151515);
   /* background-color: #0e0d0d; */
+  height: 100vh;
+  overflow-y: scroll;
 }
