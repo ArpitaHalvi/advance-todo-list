@@ -1,8 +1,9 @@
 import { ArrowForward } from "@mui/icons-material";
+import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 
 export default function Home() {
-  const loggedIn = false;
+  const loggedIn = useSelector((state) => state.auth.isAuthenticated);
   return (
     <section className="home-page">
       <h1>

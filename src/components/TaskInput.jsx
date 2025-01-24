@@ -31,32 +31,34 @@ export default function TaskInput() {
       <div className={`${isInvalid ? "invalid" : ""}`}>
         Please enter a task!
       </div>
-      <form className="input-form" onSubmit={handleAddTodo}>
-        <input
-          type="text"
-          className="task-input"
-          placeholder="Enter a task"
-          name="task"
-          value={input.task}
-          onChange={handleChange}
-        />
-        <div className="priority-add">
-          <select
-            className="priority"
-            name="priority"
-            value={input.priority}
+      <div className="wrapper-div">
+        <form className="input-form" onSubmit={handleAddTodo}>
+          <input
+            type="text"
+            className="task-input"
+            placeholder="Enter a task"
+            name="task"
+            value={input.task}
             onChange={handleChange}
-          >
-            <option value="">Choose Priority</option>
-            <option value="high">High</option>
-            <option value="medium">Medium</option>
-            <option value="low">Low</option>
-          </select>
-          <button className="add-btn" type="submit">
-            <AddTask className="add-task" />
-          </button>
-        </div>
-      </form>
+          />
+          <div className="priority-add">
+            <select
+              className="priority"
+              name="priority"
+              value={input.priority}
+              onChange={handleChange}
+            >
+              <option value="">Choose Priority</option>
+              <option value="high">High</option>
+              <option value="medium">Medium</option>
+              <option value="low">Low</option>
+            </select>
+            <button className="add-btn" type="submit">
+              <AddTask className="add-task" />
+            </button>
+          </div>
+        </form>
+      </div>
     </section>
   );
 }

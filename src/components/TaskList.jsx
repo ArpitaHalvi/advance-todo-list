@@ -9,7 +9,7 @@ import { Navigate } from "react-router-dom";
 
 export default function TaskList() {
   const todos = useSelector((state) => state.todos.todos);
-  const loggedIn = true;
+  const loggedIn = useSelector((state) => state.auth.isAuthenticated);
   const dispatch = useDispatch();
   if (!loggedIn) return <Navigate to="/login" />;
   return (
@@ -17,7 +17,10 @@ export default function TaskList() {
       <ul className="todo-container">
         {todos.map((todo) => {
           return (
-            <li className={`todo-item ${todo.isCompleted}`} key={todo.id}>
+            <li
+              className={`todo-item ${todo.isCompleted ? "completed" : ""}`}
+              key={todo.id}
+            >
               <span className="todo-text">{todo.task} </span>
               <div className="properties">
                 <span className={`priority ${todo.priority}`}>
