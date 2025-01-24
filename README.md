@@ -11,4 +11,4 @@ View tasks organized by categories (priority).
 
 The application uses local storage in the browser to persist to-do tasks and authentication data, ensuring that your tasks are saved across sessions. The app leverages Redux Toolkit for managing the application's state efficiently.
 
-<img src="">
+<img src="https://github.com/ArpitaHalvi/advance-todo-list/issues/1#issue-2810105326">
