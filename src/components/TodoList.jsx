@@ -14,7 +14,7 @@ export default function TodoList() {
       setError("Please login first!");
       navigate("/login");
     }
-  }, []);
+  }, [setError, navigate]);
   return (
     <section className="todo-app">
       {error && <Error msg={error} />}
