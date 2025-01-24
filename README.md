@@ -9,3 +9,6 @@ Delete individual to-dos.
 Mark tasks as completed.
 View tasks organized by categories (priority).
 
+The application uses local storage in the browser to persist to-do tasks and authentication data, ensuring that your tasks are saved across sessions. The app leverages Redux Toolkit for managing the application's state efficiently.
+
+<img src="">
