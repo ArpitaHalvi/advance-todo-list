@@ -5,13 +5,10 @@ import {
   deleteTodo,
   toggleCompleted,
 } from "../features/todoSlice";
-import { Navigate } from "react-router-dom";
 
 export default function TaskList() {
   const todos = useSelector((state) => state.todos.todos);
-  const loggedIn = useSelector((state) => state.auth.isAuthenticated);
   const dispatch = useDispatch();
-  if (!loggedIn) return <Navigate to="/login" />;
   return (
     <section className="task-list-section">
       <ul className="todo-container">
