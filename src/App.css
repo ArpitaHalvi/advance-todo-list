@@ -9,6 +9,7 @@
 }
 
 .navbar > .logo {
+  width: 50%;
   padding: 0.5rem;
   color: yellowgreen;
   display: flex;
@@ -25,6 +26,7 @@
 }
 
 .navbar > .user-status {
+  width: 50%;
   padding: 0.5rem;
 }
 
@@ -40,14 +42,14 @@
 }
 
 .link-div .todo-link {
-  background-color: rgba(30, 143, 255, 0.167);
+  background-color: #1e8fff2b;
   padding: 0.5rem 0.7rem;
   border-radius: 50px;
   color: dodgerblue;
 }
 
 .link-div .link {
-  background-color: rgba(30, 143, 255, 0.167);
+  background-color: #1e8fff2b;
   padding: 0.5rem 0.7rem;
   border-radius: 50px;
   color: dodgerblue;
