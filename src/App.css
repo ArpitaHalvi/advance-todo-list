@@ -9,7 +9,7 @@
 }
 
 .navbar > .logo {
-  padding: 1rem;
+  padding: 0.5rem;
   color: yellowgreen;
   display: flex;
   align-items: center;
@@ -25,7 +25,7 @@
 }
 
 .navbar > .user-status {
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 .user-status > .link-div {
@@ -51,6 +51,10 @@
   padding: 0.5rem 0.7rem;
   border-radius: 50px;
   color: dodgerblue;
+}
+
+.greet-user {
+  font-size: 0.9rem;
 }
 
 /* ------------------- ERROR STYLES --------------- */
