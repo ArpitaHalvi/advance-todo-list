@@ -7,7 +7,7 @@ import {
 } from "../features/todoSlice";
 
 export default function TaskList() {
-  const todos = useSelector((state) => state.todos.todos);
+  const todos = useSelector((state) => state.todos.todos || []);
   const dispatch = useDispatch();
   const sortByPriority = (todos) => {
     const priorityOrder = {
@@ -15,41 +15,51 @@ export default function TaskList() {
       medium: 2,
       low: 3,
     };
-    return todos.sort(
-      (a, b) => priorityOrder[a.priority] - priorityOrder[b.priority]
+    return [...todos].sort(
+      (a, b) =>
+        (priorityOrder[a.priority] || 4) - (priorityOrder[b.priority] || 4)
     );
+    // return todos.sort(
+    //   (a, b) => priorityOrder[a.priority] - priorityOrder[b.priority]
+    // );
   };
   const sortedTodos = sortByPriority(todos);
   return (
     <section className="task-list-section">
       <ul className="todo-container">
-        {sortedTodos.map((todo) => {
-          return (
-            <li
-              className={`todo-item ${todo.isCompleted ? "completed" : ""}`}
-              key={todo.id}
-            >
-              <span className="todo-text">{todo.task} </span>
-              <div className="properties">
-                <span className={`priority ${todo.priority}`}>
-                  {todo.priority}
-                </span>
-                <button
-                  className="mark-completed"
-                  onClick={() => dispatch(toggleCompleted(todo.id))}
+        {sortedTodos.length !== 0 ? (
+          <>
+            {sortedTodos.map((todo) => {
+              return (
+                <li
+                  className={`todo-item ${todo.isCompleted ? "completed" : ""}`}
+                  key={todo.id}
                 >
-                  <CheckTwoTone />
-                </button>
-                <button
-                  className="delete-btn"
-                  onClick={() => dispatch(deleteTodo(todo.id))}
-                >
-                  <Delete className="delete-icon" />
-                </button>
-              </div>
-            </li>
-          );
-        })}
+                  <span className="todo-text">{todo.task} </span>
+                  <div className="properties">
+                    <span className={`priority ${todo.priority}`}>
+                      {todo.priority}
+                    </span>
+                    <button
+                      className="mark-completed"
+                      onClick={() => dispatch(toggleCompleted(todo.id))}
+                    >
+                      <CheckTwoTone />
+                    </button>
+                    <button
+                      className="delete-btn"
+                      onClick={() => dispatch(deleteTodo(todo.id))}
+                    >
+                      <Delete className="delete-icon" />
+                    </button>
+                  </div>
+                </li>
+              );
+            })}
+          </>
+        ) : (
+          <li className="no-todo-found">No Todos Found! Add now!</li>
+        )}
       </ul>
       <div className="delete-all">
         <button

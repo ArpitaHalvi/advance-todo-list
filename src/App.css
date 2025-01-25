@@ -322,7 +322,18 @@ input {
   justify-content: space-between;
 }
 
-.todo-item:hover {
+.no-todo-found {
+  width: 100%;
+  text-align: center;
+  background-color: black;
+  padding: 0.7rem;
+  border-radius: 5px;
+  color: grey;
+  border: 2px solid #3b3a3a;
+}
+
+.todo-item:hover,
+.no-todo-found:hover {
   background-color: #80808041;
   color: white;
 }
@@ -401,13 +412,18 @@ input {
 
 .delete-all-btn {
   width: 100%;
-  background-color: #ffffff1e;
   color: crimson;
+  background-color: transparent;
   padding: 0.7rem 1rem;
   font-size: 1.1rem;
   border-radius: 5px;
   border: none;
   cursor: pointer;
+  background-color: #ffffff1e;
+}
+
+.delete-all-btn:hover {
+  background-color: #ffffff1e;
 }
 
 @media (width>800px) {
