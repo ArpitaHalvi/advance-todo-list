@@ -13,6 +13,7 @@ The application uses local storage in the browser to persist to-do tasks and aut
 
 
 ------- HOME PAGE -------
+
 ![Image](https://github.com/user-attachments/assets/d341ca35-5635-4376-b464-3785f3321ceb)
 
 ------- SIGNUP PAGE -------
@@ -20,6 +21,7 @@ The application uses local storage in the browser to persist to-do tasks and aut
 ------- LOGIN PAGE -------
 
 ------- TODOS PAGE -------
+![Image](https://github.com/user-attachments/assets/9c1ddf78-170a-418a-98b2-5bcbdcbb5a82)
 
 Technologies Used:
 
