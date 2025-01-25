@@ -18,6 +18,8 @@ The application uses local storage in the browser to persist to-do tasks and aut
 
 ------- SIGNUP PAGE -------
 
+![Image](https://github.com/user-attachments/assets/7e3542ea-2003-440b-84ae-002b4209ca78)
+
 ------- LOGIN PAGE -------
 
 ------- TODOS PAGE -------
