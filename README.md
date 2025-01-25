@@ -22,7 +22,10 @@ The application uses local storage in the browser to persist to-do tasks and aut
 
 ------- LOGIN PAGE -------
 
+![Image](https://github.com/user-attachments/assets/1bfde4c6-c99f-4a0f-acbf-59aa15ccc526)
+
 ------- TODOS PAGE -------
+
 ![Image](https://github.com/user-attachments/assets/9c1ddf78-170a-418a-98b2-5bcbdcbb5a82)
 
 Technologies Used:
