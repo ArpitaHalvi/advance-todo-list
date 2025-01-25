@@ -11,7 +11,15 @@ View tasks organized by categories (priority).
 
 The application uses local storage in the browser to persist to-do tasks and authentication data, ensuring that your tasks are saved across sessions. The app leverages Redux Toolkit for managing the application's state efficiently.
 
+
+------- HOME PAGE -------
 ![Image](https://github.com/user-attachments/assets/d341ca35-5635-4376-b464-3785f3321ceb)
+
+------- SIGNUP PAGE -------
+
+------- LOGIN PAGE -------
+
+------- TODOS PAGE -------
 
 Technologies Used:
 
